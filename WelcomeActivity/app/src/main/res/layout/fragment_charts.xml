@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChartsFragment"
+    android:background="@drawable/background_gradient">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/moneySpentPieChart"
+        android:layout_width="188dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786"></com.github.mikephil.charting.charts.PieChart>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/moneyEveryCategoryPieChart"
+        android:layout_width="188dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintTop_toBottomOf="@id/horizontalGuideline4"
+        app:layout_constraintVertical_bias="0.684"></com.github.mikephil.charting.charts.PieChart>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="341dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginRight="411dp"
+        android:layout_marginBottom="390dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="353dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="217dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/moneyLeftTextView"
+        android:layout_width="180dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalSumTextView"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/currentDateTextView"
+        android:layout_width="158dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259" />
+
+    <TextView
+        android:id="@+id/totalSumTextView"
+        android:layout_width="180dp"
+        android:layout_height="87dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentDateTextView"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <Button
+        android:id="@+id/addMoneyButton"
+        android:layout_width="76dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="56dp"
+        android:text="ADD"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTotalSumTextView" />
+
+    <TextView
+        android:id="@+id/addTotalSumTextView"
+        android:layout_width="175dp"
+        android:layout_height="51dp"
+        android:gravity="center"
+        android:text="Please insert the total amount of money available for this month"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentDateTextView"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <EditText
+        android:id="@+id/totalSumEditText"
+        android:layout_width="128dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Enter total amount"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/addMoneyButton"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTotalSumTextView" />
+
+    <EditText
+        android:id="@+id/homeMoneyEditText"
+        android:layout_width="136dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:hint="Home money"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/homeMoneyTextView"
+        android:layout_width="197dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <Button
+        android:id="@+id/addHomeMoneyButton"
+        android:layout_width="67dp"
+        android:layout_height="57dp"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <EditText
+        android:id="@+id/foodMoneyEditText"
+        android:layout_width="136dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Food money"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/moneyEveryCategoryPieChart"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeMoneyEditText"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <Button
+        android:id="@+id/addFoodMoneyButton"
+        android:layout_width="67dp"
+        android:layout_height="57dp"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toEndOf="@+id/foodMoneyEditText"
+        app:layout_constraintTop_toBottomOf="@+id/addHomeMoneyButton"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <EditText
+        android:id="@+id/medicalMoneyEditText"
+        android:layout_width="136dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:hint="Medical money"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodMoneyEditText"
+        app:layout_constraintVertical_bias="0.152" />
+
+    <Button
+        android:id="@+id/addMedicalMoneyButton"
+        android:layout_width="67dp"
+        android:layout_height="57dp"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@+id/medicalMoneyEditText"
+        app:layout_constraintTop_toBottomOf="@+id/addFoodMoneyButton"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <EditText
+        android:id="@+id/othersMoneyEditText"
+        android:layout_width="136dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:hint="Others money"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicalMoneyEditText"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <Button
+        android:id="@+id/addOthersMoneyButton"
+        android:layout_width="67dp"
+        android:layout_height="57dp"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/othersMoneyEditText"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicalMoneyButton"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <TextView
+        android:id="@+id/foodMoneyTextView"
+        android:layout_width="197dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeMoneyTextView"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/medicalMoneyTextView"
+        android:layout_width="197dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeMoneyTextView"
+        app:layout_constraintVertical_bias="0.508" />
+
+    <TextView
+        android:id="@+id/othersMoneyTextView"
+        android:layout_width="197dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeMoneyTextView"
+        app:layout_constraintVertical_bias="0.974" />
+
+    <TextView
+        android:id="@+id/piechart1TitleTextView"
+        android:layout_width="123dp"
+        android:layout_height="53dp"
+        android:gravity="center"
+        android:text="Amount of money spent"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/moneySpentPieChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/piechart2TitleTextView"
+        android:layout_width="155dp"
+        android:layout_height="59dp"
+        android:gravity="center"
+        android:text="Amount of money per category"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/moneyEveryCategoryPieChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideline4"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideline4"
+        app:layout_constraintVertical_bias="0.702" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
